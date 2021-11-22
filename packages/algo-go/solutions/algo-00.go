@@ -1,4 +1,4 @@
-package main
+package solutions
 
 func MostFrequent(arr []int) int {
 	var ret int
