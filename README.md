@@ -13,13 +13,21 @@ Coding problems with modern languages.
 
 ## Coding Problems
 
-### Most frequently occurring item in array
+All problems are prefixed with `algo-` an enumerated from zero.
+### [algo-00] Most frequently occurring item in array
 
-Given an array of integers, find the most frequently occurring item.
-E.g. [1,2,1,4,2,3,1] -> 1
+Given a non-empty array of integers, find the first most frequently occurring item.
+E.g. [1,2,1,3,1] -> 1
 
-Input: `arr: int[], n: int`
-Output: `int | null`
+Input: `arr: int[]`
+Output: `int`
+
+#### Solution 
+
+- Use a hash map to keep track of occurrences for each item
+- keep track of the item with most occurrences
+- Time Complexity: `O(n)`
+- Auxiliary space: `O(n)`
 
 ## Tests
 
