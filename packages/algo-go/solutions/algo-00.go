@@ -2,7 +2,6 @@ package solutions
 
 func MostFrequent(arr []int) int {
 	var ret int
-	// Track the the max number of occurrences for an item
 	maxCount := -1
 	counter := make(map[int]int, len(arr))
 	for _, n := range arr {
