@@ -1,0 +1,19 @@
+{
+  "name": "algo-ts",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/protiumx/algo/packages/algo-ts",
+  "author": "Brian Mayo",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest --config jest.config.js --coverage"
+  },
+  "devDependencies": {
+    "$": "link:./src",
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2"
+  }
+}
