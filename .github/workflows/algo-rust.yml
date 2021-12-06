@@ -1,4 +1,11 @@
 on:
+  push:
+    branches:
+      - main
+    paths:
+    - .github/workflows/algo-rust.yml
+    - packages/algo-rust/**
+    - '!**/*.md'
   pull_request:
     paths:
       - .github/workflows/algo-rust.yml

@@ -1,5 +1,12 @@
 name: algo-go
 on:
+  push:
+    branches:
+      - main
+    paths:
+    - .github/workflows/algo-go.yml
+    - packages/algo-go/**
+    - '!**/*.md'
   pull_request:
     paths:
     - .github/workflows/algo-go.yml
