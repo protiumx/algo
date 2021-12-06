@@ -15,9 +15,9 @@ jobs:
       with:
         go-version: 1.17.x
     - uses: actions/checkout@v2
-    - name: Install Go dependencies
-      run: make -C packages/algo-go/ install
-    - name: Build Go code
-      run: make -C packages/algo-go/ build
+    # - name: Install Go dependencies
+    #   run: make -C packages/algo-go/ install
+    # - name: Build Go code
+    #   run: make -C packages/algo-go/ build
     - name: Test Go code
       run: make -C packages/algo-go/ test
