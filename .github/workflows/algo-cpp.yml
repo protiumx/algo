@@ -1,0 +1,30 @@
+name: algo-cpp
+
+on:
+  pull_request:
+    paths:
+    - .github/workflows/algo-cpp.yml
+    - packages/algo-cpp/**
+    - '!**/*.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Configure CMake
+      run: cmake -S $GITHUB_WORKSPACE -B ${{runner.workspace}}/build
+
+    - name: Build
+      working-directory: ${{runner.workspace}}/build
+      run: cmake --build .
+
+    - name: Test
+      working-directory: ${{runner.workspace}}/build
+      run: ctest -V

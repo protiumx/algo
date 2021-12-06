@@ -1,0 +1,24 @@
+name: algo-ts
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/algo-ts.yml
+      - packages/algo-ts/**
+      - '!**/*.md'
+jobs:
+
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.17.5
+      - uses: actions/checkout@v2
+      - name: Install yarn dependencies
+        run: yarn --cwd packages/algo-ts/ install --immutable
+      - name: Test
+        id: yarn_test
+        run: yarn --cwd packages/algo-ts/ test
