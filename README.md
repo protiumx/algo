@@ -1,5 +1,23 @@
 # algo
 
+<p align="left">
+    <a href="https://github.com/protiumx/algo/actions/workflows/algo-cpp.yml" alt="algo-cpp">
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-cpp.yml/badge.svg?branch=main"/>
+    </a>
+    <a href="https://github.com/protiumx/algo/actions/workflows/algo-go.yml" alt="algo-ui">
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-go.yml/badge.svg?branch=main"/>
+    </a>
+    <a href="https://github.com/protiumx/algo/actions/workflows/algo-py.yml" alt="algo-ui">
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-py.yml/badge.svg?branch=main"/>
+    </a>
+    <a href="https://github.com/protiumx/algo/actions/workflows/algo-rust.yml" alt="algo-ui">
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-rust.yml/badge.svg?branch=main"/>
+    </a>
+    <a href="https://github.com/protiumx/algo/actions/workflows/algo-ts.yml" alt="algo-ui">
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-ts.yml/badge.svg?branch=main"/>
+    </a>
+</p>
+
 Coding problems with modern languages.
 
 ## Dependencies
