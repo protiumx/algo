@@ -30,36 +30,27 @@ Coding problems with modern languages, TDD and CI.
 
 ## Folder structure
 
-- `packages`
-  - `algo-cpp`: solutions in c++ (17)
-  - `algo-go`: solutions in golang
-  - `algo-py`: solutions in python 3
-  - `algo-rust`: solutions in rust
-  - `algo-ts`: solutions in typescript
+- `packages/`
+  - `algo-cpp/`: solutions in c++ (17)
+  - `algo-go/`: solutions in golang
+  - `algo-py/`: solutions in python 3
+  - `algo-rust/`: solutions in rust
+  - `algo-ts/`: solutions in typescript
 
 ## Coding Problems
 
 All problems are prefixed with `algo-` an enumerated from zero. This way you can easily find the solutions in any package.
-### [algo-00] Most frequently occurring item in array
+Checkout the list of problems [here](PROBLEMS.md)
 
-Given an array, find the most frequent element in it. If there are multiple elements that appear a maximum number of times, print any one of them.
-E.g. [1,2,1,3,1] -> 1
+## Testing
 
-Input: `arr int[], n int`
-Output: `int`
-
-#### Solution 
-
-- Use a hash map to keep track of occurrences for each item
-- keep track of the item with most occurrences
-- Time Complexity: `O(n)`
-- Auxiliary space: `O(n)`
-
-## Tests
-
-Run tests for all packages
-```sh
-make test
+All packages are configured to use `Makefile` as follow
+```bash
+make -C packages/algo-[lang]/ test
+```
+Except for `algo-ts`, where we use yarn
+```bash
+yarn --cwd packages/algo-ts/ test
 ```
 
 ## Contributing
