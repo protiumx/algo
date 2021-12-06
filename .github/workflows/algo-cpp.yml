@@ -1,6 +1,13 @@
 name: algo-cpp
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+    - .github/workflows/algo-cpp.yml
+    - packages/algo-cpp/**
+    - '!**/*.md'
   pull_request:
     paths:
     - .github/workflows/algo-cpp.yml

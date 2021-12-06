@@ -1,6 +1,13 @@
 name: algo-ts
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+    - .github/workflows/algo-ts.yml
+    - packages/algo-ts/**
+    - '!**/*.md'
   pull_request:
     paths:
       - .github/workflows/algo-ts.yml

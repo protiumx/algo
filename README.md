@@ -18,7 +18,7 @@
     </a>
 </p>
 
-Coding problems with modern languages.
+Coding problems with modern languages, TDD and CI.
 
 ## Dependencies
 
