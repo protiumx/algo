@@ -1,0 +1,19 @@
+name: algo-py
+on:
+  pull_request:
+    paths:
+    - .github/workflows/algo-py.yml
+    - packages/algo-py/**
+    - '!**/*.md'
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' 
+    - run: python -m unittest discover -s packages/algo-py/src
