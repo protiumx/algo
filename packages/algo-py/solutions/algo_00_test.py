@@ -1,5 +1,5 @@
 import unittest
-from algo_00 import most_frequent
+from solutions import most_frequent
 
 
 class TestAlgo_00(unittest.TestCase):
