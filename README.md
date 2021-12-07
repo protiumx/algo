@@ -65,3 +65,7 @@ Ideally what we want:
 - A good description with examples, images or a link to `leetcode`, `hackerank` or similar.
 - All PR must be submitted with **tests**
 - If possible, you might want to provide the solutions in all the different languages.
+
+
+## TODO
+- [ ] Setup linting CI jobs
