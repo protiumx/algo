@@ -1,7 +1,7 @@
 use std::char;
 use std::collections::VecDeque;
 
-const DIRECTIONS: &'static [[i32; 2]; 8] = &[
+const DIRECTIONS: &[[i32; 2]; 8] = &[
   [-1, -1],
   [-1, 0],
   [-1, 1],
