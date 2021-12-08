@@ -26,7 +26,7 @@ fn minesweeper(board: &mut Vec<Vec<char>>, click: Vec<i32>) -> &Vec<Vec<char>> {
   while !q.is_empty() {
     let point = q.pop_front().unwrap();
     let (px, py) = (point / n as i32, point % n as i32);
-    let mines = get_adjacent_mines(&board, px as i32, py as i32, m, n);
+    let mines = get_adjacent_mines(board, px as i32, py as i32, m, n);
     if mines > 0 {
       board[px as usize][py as usize] = (mines as u8 + b'0') as char;
     } else {
@@ -41,7 +41,7 @@ fn minesweeper(board: &mut Vec<Vec<char>>, click: Vec<i32>) -> &Vec<Vec<char>> {
     }
   }
 
-  return board;
+  board
 }
 
 fn minesweeper_dfs(board: &mut Vec<Vec<char>>, click: Vec<i32>) -> &Vec<Vec<char>> {
@@ -53,7 +53,7 @@ fn minesweeper_dfs(board: &mut Vec<Vec<char>>, click: Vec<i32>) -> &Vec<Vec<char
   } else {
     dfs(board, click_x, click_y, m, n);
   }
-  return board;
+  board
 }
 
 fn dfs(board: &mut Vec<Vec<char>>, i: i32, j: i32, m: usize, n: usize) {
@@ -71,7 +71,7 @@ fn dfs(board: &mut Vec<Vec<char>>, i: i32, j: i32, m: usize, n: usize) {
   }
 }
 
-fn get_adjacent_mines(board: &Vec<Vec<char>>, x: i32, y: i32, m: usize, n: usize) -> i32 {
+fn get_adjacent_mines(board: &[Vec<char>], x: i32, y: i32, m: usize, n: usize) -> i32 {
   let mut count: i32 = 0;
   for &direction in DIRECTIONS {
     let i = x + direction[0];
@@ -84,7 +84,7 @@ fn get_adjacent_mines(board: &Vec<Vec<char>>, x: i32, y: i32, m: usize, n: usize
 }
 
 fn is_valid_index(i: i32, j: i32, m: usize, n: usize) -> bool {
-  return 0 <= i && i < m as i32 && 0 <= j && j < n as i32;
+  0 <= i && i < m as i32 && 0 <= j && j < n as i32
 }
 
 #[cfg(test)]
