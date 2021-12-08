@@ -2,7 +2,7 @@ package solutions
 
 import "container/list"
 
-var DIRECTIONS = [][]int{
+var DIRECTIONS = [8][2]int{
 	{-1, -1},
 	{-1, 0},
 	{-1, 1},
