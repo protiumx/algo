@@ -37,6 +37,33 @@ Coding problems with modern languages, TDD and CI.
   - `algo-rust/`: solutions in rust
   - `algo-ts/`: solutions in typescript
 
+## Packages
+
+### `algo-cpp`
+- C++ 11/17
+- Testing: [gtest](https://github.com/google/googletest)
+- Conventions: [Google style guide](https://google.github.io/styleguide/cppguide.html)
+
+### `algo-go`
+- Go 1.7
+- Testing: `go test`.
+- Conventions: [Uber style guide](https://github.com/uber-go/guide)
+
+### `algo-py`
+- python 3.x
+- Testing: `python unittest`
+- Conventions: [google pyguide](https://google.github.io/styleguide/pyguide.html)
+
+### `algo-rust`
+- rustc 1.56
+- Testing: `cargo test`
+- Conventions: `cargo clippy`
+
+### `algo-ts`
+- TypeScript 4.5
+- Testing: [jest](https://jestjs.io/)
+- Conventions: [airbnb](https://github.com/airbnb/javascript) for typescript with [eslint](https://eslint.org/)
+
 ## Coding Problems
 
 All problems are prefixed with `algo-` an enumerated from zero. This way you can easily find the solutions in any package.
@@ -69,5 +96,7 @@ Ideally what we want:
 
 ## TODO
 - [ ] Setup linting CI jobs
+- [ ] Use yarn pnp to reduce CI run time
 - [ ] Add GTest sources to repo
 - [ ] Fix type check in vscode for algo-cpp and gtest
+- [ ] Setup linting for every package
