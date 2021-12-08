@@ -1,6 +1,6 @@
 import Queue from "./collections/queue";
 
-const directions = [
+const DIRECTIONS = [
   [-1, -1],
   [-1, 0],
   [-1, 1],
@@ -34,7 +34,7 @@ export function minesweeper(board: string[][], click: number[]): string[][] {
     } else {
       let i = 0;
       let j = 0;
-      for (const direction of directions) {
+      for (const direction of DIRECTIONS) {
         i = px + direction[0];
         j = py + direction[1];
         if (isValidIndex(i, j, m, n) && board[i][j] === "E") {
@@ -69,7 +69,8 @@ function dfs(board: string[][], i: number, j: number, m: number, n: number) {
   if (mines > 0) {
     board[i][j] = mines.toString();
   } else {
-    for (const direction of directions) {
+    board[i][j] = "B";
+    for (const direction of DIRECTIONS) {
       dfs(board, i + direction[0], j + direction[1], m, n);
     }
   }
@@ -85,7 +86,7 @@ function getAdjacentMines(
   let count = 0;
   let i = 0;
   let j = 0;
-  for (const direction of directions) {
+  for (const direction of DIRECTIONS) {
     i = x + direction[0];
     j = y + direction[1];
     if (isValidIndex(i, j, m, n) && board[i][j] == "M") {

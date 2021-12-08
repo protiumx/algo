@@ -2,7 +2,7 @@ package solutions
 
 import "container/list"
 
-var directions = [][]int{
+var DIRECTIONS = [][]int{
 	{-1, -1},
 	{-1, 0},
 	{-1, 1},
@@ -37,7 +37,7 @@ func Minesweeper(
 		if mines > 0 {
 			board[px][py] = byte(mines + '0')
 		} else {
-			for _, direction := range directions {
+			for _, direction := range DIRECTIONS {
 				i, j = px+direction[0], py+direction[1]
 				if isValidIndex(i, j, m, n) && board[i][j] == 'E' {
 					board[i][j] = 'B'
@@ -72,7 +72,8 @@ func dfs(board [][]byte, i, j, m, n int) {
 	if mines > 0 {
 		board[i][j] = byte(mines + '0')
 	} else {
-		for _, direction := range directions {
+		board[i][j] = 'B'
+		for _, direction := range DIRECTIONS {
 			dfs(board, i+direction[0], j+direction[1], m, n)
 		}
 	}
@@ -81,7 +82,7 @@ func dfs(board [][]byte, i, j, m, n int) {
 func getAdjacentMines(board [][]byte, x, y, m, n int) int {
 	count := 0
 	var i, j int
-	for _, direction := range directions {
+	for _, direction := range DIRECTIONS {
 		i, j = x+direction[0], y+direction[1]
 		if isValidIndex(i, j, m, n) && board[i][j] == 'M' {
 			count++
