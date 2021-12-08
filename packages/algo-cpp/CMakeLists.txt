@@ -11,16 +11,11 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
+# file(GLOB_RECURSE sources ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
+add_executable(tests main.cpp algo_00.cpp algo_01.cpp)
+
+target_link_libraries(tests gtest_main)
 enable_testing()
-add_executable(
-  algo_00
-  algo_00.cpp
-)
-target_link_libraries(
-  algo_00
-  gtest_main
-)
-
 include(GoogleTest)
-gtest_discover_tests(algo_00)
+gtest_discover_tests(tests)

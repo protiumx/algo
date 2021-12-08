@@ -15,6 +15,18 @@ Output: `int`
 
 - Use a hash map to keep track of occurrences for each item
 - keep track of the item with most occurrences
-- Time Complexity: `O(n)`
-- Auxiliary space: `O(n)`
 
+**Time Complexity:** `O(n)` -> We need to check the whole array
+**Auxiliary space:** `O(n)` -> It's possible that the array has all unique numbers
+
+### `[algo-01]` Minesweeper Game `[medium]`
+
+Problem description can be found at [leetcode](https://leetcode.com/problems/minesweeper/)
+
+### Solution
+- First check if the cell at the `click` is a mine.
+- If `click` position is not a mine, perform DFS from the click position, searching for `empty` cells `"E"`
+- If there is a mine in the surroundings of the cell i.e. 1 cell in all 8 directions, stop DFS and set the sell with the number of mines found. If there are no mines, mark the cell with `"B"` and continue DFS
+
+**Time Complexity:** `O(m * n)` -> Worst case we will visit every cell
+**Auxiliary space:** `O(m + n)` -> Since we are doing `DFS`, at some point our que could contain all the items from the a cell's row and all the items from a the column.
