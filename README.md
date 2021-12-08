@@ -69,3 +69,5 @@ Ideally what we want:
 
 ## TODO
 - [ ] Setup linting CI jobs
+- [ ] Add GTest sources to repo
+- [ ] Fix type check in vscode for algo-cpp and gtest
