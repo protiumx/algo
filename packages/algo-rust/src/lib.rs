@@ -3,3 +3,4 @@
 
 mod algo_00;
 mod algo_01;
+mod algo_02;

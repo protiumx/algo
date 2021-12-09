@@ -83,9 +83,11 @@ yarn --cwd packages/algo-ts/ test
 ## Contributing
 
 Please feel free to create a `PR` for:
-- Adding more coding problems
+- Adding more coding problems (with solutions in all packages if possible)
 - Improving existing solutions
 - Improving projects' config/setup
+
+**NOTE:** This repository follows [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) practices.
 
 ### Adding Coding Problems
 Ideally what we want:
@@ -100,3 +102,4 @@ Ideally what we want:
 - [ ] Add GTest sources to repo
 - [ ] Fix type check in vscode for algo-cpp and gtest
 - [ ] Setup linting for every package
+- [ ] Setup input text files to load during tests

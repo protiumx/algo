@@ -27,17 +27,18 @@ fn minesweeper(board: &mut Vec<Vec<char>>, click: Vec<i32>) -> &Vec<Vec<char>> {
     let point = q.pop_front().unwrap();
     let (px, py) = (point / n as i32, point % n as i32);
     let mines = get_adjacent_mines(board, px as i32, py as i32, m, n);
-    if mines > 0 {
-      board[px as usize][py as usize] = (mines as u8 + b'0') as char;
-    } else {
-      for &direction in DIRECTIONS {
-        let i = px + direction[0];
-        let j = py + direction[1];
-        if is_valid_index(i as i32, j as i32, m, n) && board[i as usize][j as usize] == 'E' {
-          board[i as usize][j as usize] = 'B';
-          q.push_back(i * n as i32 + j);
+    match mines {
+      0 => {
+        for &direction in DIRECTIONS {
+          let i = px + direction[0];
+          let j = py + direction[1];
+          if is_valid_index(i as i32, j as i32, m, n) && board[i as usize][j as usize] == 'E' {
+            board[i as usize][j as usize] = 'B';
+            q.push_back(i * n as i32 + j);
+          }
         }
       }
+      _ => board[px as usize][py as usize] = (mines as u8 + b'0') as char,
     }
   }
 
@@ -48,10 +49,9 @@ fn minesweeper_dfs(board: &mut Vec<Vec<char>>, click: Vec<i32>) -> &Vec<Vec<char
   let (click_x, click_y) = (click[0], click[1]);
   let (m, n) = (board.len(), board[0].len());
 
-  if board[click_x as usize][click_y as usize] == 'M' {
-    board[click_x as usize][click_y as usize] = 'X';
-  } else {
-    dfs(board, click_x, click_y, m, n);
+  match board[click_x as usize][click_y as usize] {
+    'M' => board[click_x as usize][click_y as usize] = 'X',
+    _ => dfs(board, click_x, click_y, m, n),
   }
   board
 }
@@ -61,13 +61,14 @@ fn dfs(board: &mut Vec<Vec<char>>, i: i32, j: i32, m: usize, n: usize) {
     return;
   }
   let mines = get_adjacent_mines(board, i, j, m, n);
-  if mines > 0 {
-    board[i as usize][j as usize] = (mines as u8 + b'0') as char;
-  } else {
-    board[i as usize][j as usize] = 'B';
-    for &direction in DIRECTIONS {
-      dfs(board, i + direction[0], j + direction[1], m, n);
+  match mines {
+    0 => {
+      board[i as usize][j as usize] = 'B';
+      for &direction in DIRECTIONS {
+        dfs(board, i + direction[0], j + direction[1], m, n);
+      }
     }
+    _ => board[i as usize][j as usize] = (mines as u8 + b'0') as char,
   }
 }
 
