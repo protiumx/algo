@@ -11,9 +11,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-# file(GLOB_RECURSE sources ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+include_directories(${PROJECT_SOURCE_DIR})
+file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/solutions/*.cpp)
 
-add_executable(tests main.cpp algo_00.cpp algo_01.cpp)
+add_executable(tests main.cpp ${SRC_FILES})
 
 target_link_libraries(tests gtest_main)
 enable_testing()
