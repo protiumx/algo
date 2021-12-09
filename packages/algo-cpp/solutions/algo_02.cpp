@@ -12,26 +12,16 @@ struct TreeNode
 
 bool is_valid_BST(TreeNode *node, int *max, int *min)
 {
-  if (max != NULL && *max <= node->val)
+  if (node == NULL)
+  {
+    return true;
+  }
+  if ((max != NULL && *max <= node->val) || (min != NULL && node->val <= *min))
   {
     return false;
-  }
-  if (min != NULL && node->val <= *min)
-  {
-    return false;
-  }
-  bool left_is_valid = true;
-  bool right_is_valid = true;
-  if (node->left != NULL)
-  {
-    left_is_valid = is_valid_BST(node->left, &node->val, min);
-  }
-  if (node->right != NULL)
-  {
-    right_is_valid = is_valid_BST(node->right, max, &node->val);
   }
 
-  return left_is_valid && right_is_valid;
+  return is_valid_BST(node->left, &node->val, min) && is_valid_BST(node->right, max, &node->val);
 }
 
 TEST(IsValidBST, TestValid)
