@@ -30,3 +30,15 @@ Problem description can be found at [leetcode](https://leetcode.com/problems/min
 
 **Time Complexity:** `O(m * n)` -> Worst case we will visit every cell
 **Auxiliary space:** `O(m + n)` -> Since we are doing `DFS`, at some point our que could contain all the items from the a cell's row and all the items from a the column.
+
+### `[algo-02]` Validate Binary Search Tree `[medium]`
+
+Problem description can be found at [leetcode](https://leetcode.com/problems/validate-binary-search-tree/)
+
+### Solution
+- For each node we need to check if expectations are met for the value and the left and right subtree
+- All values on the left should be compared to a `max` value.
+- All values on the right should be compared to a `min` value.
+
+**Time Complexity:** `O(n)` -> We visit all nodes in the tree
+**Auxiliary space:** `O(1)` -> The extra space is constant
