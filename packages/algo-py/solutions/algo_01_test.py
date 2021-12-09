@@ -1,5 +1,5 @@
 import unittest
-from solutions import *
+from solutions import minesweeper, minesweeper_dfs
 
 
 input = [["E", "E", "E", "E", "E"], ["E", "E", "M", "E", "E"],
