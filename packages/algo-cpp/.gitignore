@@ -1,1 +1,7 @@
 build
+CMakeFiles
+_deps
+.cache
+Testing
+lib
+bin

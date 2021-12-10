@@ -16,7 +16,6 @@ int most_frequent(int arr[], int n)
       max_count = hash[arr[i]];
     }
   }
-
   return res;
 }
 
