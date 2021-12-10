@@ -2,19 +2,19 @@
 
 <p align="left">
     <a href="https://github.com/protiumx/algo/actions/workflows/algo-cpp.yml" alt="algo-cpp">
-        <img src="https://github.com/protiumx/algo/actions/workflows/algo-cpp.yml/badge.svg?branch=main"/>
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-cpp.yml/badge.svg?branch=main&style=flat-square"/>
     </a>
     <a href="https://github.com/protiumx/algo/actions/workflows/algo-go.yml" alt="algo-ui">
-        <img src="https://github.com/protiumx/algo/actions/workflows/algo-go.yml/badge.svg?branch=main"/>
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-go.yml/badge.svg?branch=mainstyle=flat-square"/>
     </a>
     <a href="https://github.com/protiumx/algo/actions/workflows/algo-py.yml" alt="algo-ui">
-        <img src="https://github.com/protiumx/algo/actions/workflows/algo-py.yml/badge.svg?branch=main"/>
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-py.yml/badge.svg?branch=main&style=flat-square"/>
     </a>
     <a href="https://github.com/protiumx/algo/actions/workflows/algo-rust.yml" alt="algo-ui">
-        <img src="https://github.com/protiumx/algo/actions/workflows/algo-rust.yml/badge.svg?branch=main"/>
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-rust.yml/badge.svg?branch=main&style=flat-square"/>
     </a>
     <a href="https://github.com/protiumx/algo/actions/workflows/algo-ts.yml" alt="algo-ui">
-        <img src="https://github.com/protiumx/algo/actions/workflows/algo-ts.yml/badge.svg?branch=main"/>
+        <img src="https://github.com/protiumx/algo/actions/workflows/algo-ts.yml/badge.svg?branch=main&style=flat-square"/>
     </a>
 </p>
 
@@ -26,7 +26,7 @@ Coding problems with modern languages, TDD and CI.
 - `CMake`
 - `Go`
 - `Python3`
-- `Yarn`
+- `NodeJS, Yarn`
 
 ## Folder structure
 
@@ -86,6 +86,7 @@ Please feel free to create a `PR` for:
 - Adding more coding problems (with solutions in all packages if possible)
 - Improving existing solutions
 - Improving projects' config/setup
+- Resolving pending TODO's
 
 **NOTE:** This repository follows [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) practices.
 
@@ -103,3 +104,10 @@ Ideally what we want:
 - [ ] Fix type check in vscode for algo-cpp and gtest
 - [ ] Setup linting for every package
 - [ ] Setup input text files to load during tests
+
+## Sponsorship
+
+If you find this project useful please consider making a donation
+<!-- markdownlint-disable no-inline-html -->
+<a href="https://www.buymeacoffee.com/p3kqm9Z2h" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.paypal.com/paypalme/protium"><img src="paypal.png" alt="PayPal donate button" /></a>
