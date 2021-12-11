@@ -5,3 +5,4 @@ _deps
 Testing
 lib
 bin
+compile_commands.json
