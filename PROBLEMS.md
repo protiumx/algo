@@ -46,7 +46,7 @@ NOTE: it can also be solved by traversing the tree in-order.
 **Auxiliary space:** `O(1)` -> The extra space is constant
 
 
-## `[algo-03]` Longest Substring Without Repeating Characters
+## `[algo-03]` Longest Substring Without Repeating Characters `[medium]`
 
 Problem description can be found at [leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
@@ -64,3 +64,22 @@ E.g.
 
 **Time Complexity:** `O(n)` -> We iterate the whole string
 **Auxiliary space:** `O(1)` -> The extra space is the number of characters in `[a-z]`
+
+## `[algo-04]` Minimim Path Sum `[medium]`
+
+Problem description can be found at [leetcode](https://leetcode.com/problems/minimum-path-sum/)
+
+### Solution
+
+This is a weighted vertice graph problem. A solution doing DFS would be valid but the runtime would be O(2^(n+m)).
+When calculating a `minPath` on a node, we know that: `minCost[i][j] = matrix[i][j] + min(minCost[i-1][j], minCost[i][j-1])`.
+So, for each node, the minPath at that point is the minimum between the path until the node on the top and the path until the node to the left.
+With that in mind, we can **pre-fill** our matrix of costs on the first row and first column.
+Steps:
+- Pre-fill first column and row
+- Iterate over the matrix and fill the rest of cells knowing that `minCost[i][j] = matrix[i][j] + min(minCost[i-1][j], minCost[i][j-1])`.
+
+**Time Complexity:** `O(m * n)` -> We visit all the cells in the matrix
+**Auxiliary space:** `O(m * n)` -> We store the cost of all the cells
+
+
