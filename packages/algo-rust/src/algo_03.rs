@@ -1,15 +1,15 @@
 use std::cmp;
 
 fn max_substr(input: String) -> i32 {
-    let mut max = 0;
-    let mut start = 0;
-    let mut indexes = arr![-1; 127];
+    let mut max: i32 = 0;
+    let mut start: i32 = 0;
+    let mut indexes = vec![-1; 127];
     for (i, c) in input.chars().enumerate() {
-        if indexes[c] >= start {
-            start = indexes[c] + 1;
+        if indexes[c as usize] >= start {
+            start = indexes[c as usize] + 1;
         }
-        indexes[c] = i;
-        max = cmp::max(max, i - start + 1);
+        indexes[c as usize] = i as i32;
+        max = cmp::max(max, (i as i32) - start + 1);
     }
     return max;
 }
@@ -21,6 +21,6 @@ mod test {
     #[test]
     fn test() {
         let input = "abcbghjb";
-        assert_eq!(max_substr(input), 5);
+        assert_eq!(max_substr(input.to_string()), 5);
     }
 }
