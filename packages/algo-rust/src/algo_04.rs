@@ -2,7 +2,7 @@ use std::cmp;
 
 fn min_path_sum(grid: Vec<Vec<i32>>) -> i32 {
     let (m, n) = (grid.len(), grid[0].len());
-    let mut costs = vec![vec![0 as i32; n]; m];
+    let mut costs = vec![vec![0_i32; n]; m];
     costs[0][0] = grid[0][0];
 
     for i in 1..m {

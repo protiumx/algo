@@ -11,7 +11,7 @@ fn max_substr(input: String) -> i32 {
         indexes[c as usize] = i as i32;
         max = cmp::max(max, (i as i32) - start + 1);
     }
-    return max;
+    max
 }
 
 #[cfg(test)]
