@@ -3,5 +3,5 @@
 test:
 	cmake -S . -B build
 	cmake --build build
-	cd build && ./tests
+	cd build && ctest
 	
