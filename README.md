@@ -110,4 +110,3 @@ Ideally what we want:
 If you find this project useful you can support my work with:
 <!-- markdownlint-disable no-inline-html -->
 <a href="https://www.buymeacoffee.com/p3kqm9Z2h" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-<a href="https://www.paypal.com/paypalme/protium"><img src="paypal.png" alt="PayPal donate button" /></a>
